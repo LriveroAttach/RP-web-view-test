@@ -11,17 +11,16 @@
   <p>CR7 is the best. SIIIIIIIIUUUUUUUUUUUUUUUUUUUUUUUUUUUU</p>
   <button type="button" value="Siu" id="btn-siu">Siu</button>
   <script>
+
     var btnSiu = document.querySelector('#btn-siu');
     if(btnSiu){
       btnSiu.addEventListener('click', function(){
         alert(window.ReactNativeWebView);
-        window.ReactNativeWebView.postMessage("SIIIIIIUUUUUUUU!")
+        if(typeof window.ReactNativeWebView !== 'undefined'){
+          window.ReactNativeWebView.postMessage("CR7 is the best, Messi is the worst!");
+        }
       });
     }
-
-    setTimeout(function () {
-      alert('SIIIIIUUUUUUUUU');
-    }, 5000);
   </script>
 </body>
 </html>
