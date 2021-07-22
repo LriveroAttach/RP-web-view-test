@@ -15,7 +15,6 @@
     var btnSiu = document.querySelector('#btn-siu');
     if(btnSiu){
       btnSiu.addEventListener('click', function(){
-        alert(window.ReactNativeWebView);
         if(typeof window.ReactNativeWebView !== 'undefined'){
           window.ReactNativeWebView.postMessage("CR7 is the best, Messi is the worst!");
         }
