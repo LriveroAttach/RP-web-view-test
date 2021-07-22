@@ -9,9 +9,14 @@
 <body>
   <h1>Hello world from webViewTest</h1>
   <p>CR7 is the best. SIIIIIIIIUUUUUUUUUUUUUUUUUUUUUUUUUUUU</p>
-  <button type="button" value="Siu">Siuu</button>
+  <button type="button" value="Siu" id="btn-siu">Siu</button>
   <script>
-
+    var btnSiu = document.querySelector('#btn-siu');
+    if(btnSiu){
+      btnSiu.addEventListener('click', function(){
+        window.ReactNativeWebView.postMessage("SIIIIIIUUUUUUUU!")
+      });
+    }
   </script>
 </body>
 </html>
