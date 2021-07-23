@@ -11,12 +11,20 @@
   <p>CR7 is the best. SIIIIIIIIUUUUUUUUUUUUUUUUUUUUUUUUUUUU</p>
   <button type="button" value="Siu" id="btn-siu">Siu</button>
   <script>
-
+    var testEvent = {
+      title: 'addToCart',
+      params: {
+        param1: 'siu',
+        param2: 5,
+        price: 10
+      }
+    };
+    
     var btnSiu = document.querySelector('#btn-siu');
     if(btnSiu){
       btnSiu.addEventListener('click', function(){
         if(typeof window.ReactNativeWebView !== 'undefined'){
-          window.ReactNativeWebView.postMessage("CR7 is the best, Messi is the worst!");
+          window.ReactNativeWebView.postMessage(JSON.stringify(testEvent));
         }
       });
     }
